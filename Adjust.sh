@@ -5,7 +5,7 @@
 # Read this first: https://blog.jcoglan.com/2013/11/15/why-github-is-not-your-cv/
 
 adjust() {
-    NEXTDATE=$(date -d "$LASTDATE")
+    NEXTDATE=$(date -d "$1")
 	echo "$RANDOM" | tee nonce
 	git add nonce
 	git commit -am "$NEXTDATE"
@@ -17,5 +17,5 @@ adjust "25 May 2018"
 
 for i in $(seq 0 1789); do
 	echo $i
-	adjust "+ 1 days"
+	adjust "$LASTDATE + 1 days"
 done
