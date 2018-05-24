@@ -10,7 +10,7 @@ adjust() {
 	git add nonce
 	git commit -am "$NEXTDATE"
     GIT_COMMITTER_DATE="$NEXTDATE" git commit --amend --no-edit --date "$NEXTDATE"
-    LASTDATE=$NEXTDATE
+    LASTDATE=$(date -d "$1" +%Y-%m-%d)
 }
 
 adjust "25 May 2018"
