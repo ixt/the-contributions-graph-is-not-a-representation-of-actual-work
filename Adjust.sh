@@ -9,7 +9,7 @@ adjust() {
 	echo "$RANDOM" | tee nonce
 	git add nonce
 	git commit -am "$NEXTDATE"
-    GIT_COMMITTER_DATE="Mon 20 Aug 2018 20:19:19 BST" git commit --amend --no-edit --date "$NEXTDATE"
+    GIT_COMMITTER_DATE="$NEXTDATE" git commit --amend --no-edit --date "$NEXTDATE"
     LASTDATE=$NEXTDATE
 }
 
