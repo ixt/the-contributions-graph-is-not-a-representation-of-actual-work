@@ -13,7 +13,7 @@ adjust() {
     LASTDATE=$(date -d "$1" +%Y-%m-%d)
 }
 
-adjust "9 December 2019"
+adjust "3 November 2024"
 
 for i in $(seq 0 1789); do
 	echo $i
